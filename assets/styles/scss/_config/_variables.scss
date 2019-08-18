@@ -24,11 +24,11 @@ $grey-7                           : rgba($black, .7);
 $grey-8                           : rgba($black, .8);
 $grey-9                           : rgba($black, .9);
 
-$palette_a                        : #560000;
-$palette_b                        : #b70000;
-$palette_c                        : #b70000;
-$palette_d                        : #282828;
-$palette_e                        : #08AF22;
+$palette_a                        : #32A4C6;
+$palette_b                        : #D91A3D;
+$palette_c                        : #27697F;
+$palette_d                        : #F2F2F2;
+$palette_e                        : #0D0D0D;
 $gradient-palette-a-b             : linear-gradient(312deg, $palette_a, $palette_b);
 $gradient-grey                    : linear-gradient(124deg, $grey-1, $black);
 
@@ -43,6 +43,9 @@ $boldfont                          : 'Univers', sans-serif;
 $displayfont                       : 'GraphikSemibold', sans-serif;
 $italicfont                        : 'GraphikSemibold', sans-serif;
 $numberfont                        : 'GraphikSemibold', sans-serif;
+$fontawesome4                      : 'FontAwesome';
+$fontawesome5                      : 'Font Awesome\ 5 Free';
+$fontawesome5brands                : 'Font Awesome\ 5 Brands';
 
 $basefontsize                      : 14;
 $lineheight                        : 20;

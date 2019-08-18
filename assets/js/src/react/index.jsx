@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
+import Button from './Button/Button';
 
 const getRenderFunc = app => {
   return () => {
@@ -26,7 +27,7 @@ const apps = [];
 if (elements.userProfile.length > 0) {
   apps.push(...Array.from(elements.userProfile).map(element => ({
     element,
-    component: null,
+    component: <Button icon={'fas fa-rocket'} text={'sdgfd'} />,
     file: './UserProfile/UserProfile',
     name: 'UserProfile'
   })));

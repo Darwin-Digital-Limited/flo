@@ -34,7 +34,7 @@
     "build": "webpack && webpack --config webpack.serverSide.config.js",
     "build:developmentMode": "webpack --mode=development",
     "test": "cross-env NODE_ENV=test BABEL_ENV=test nyc --all mocha --recursive ./assets/js/test",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./",
     "build-storybook": "build-storybook"
   },
   "repository": {

@@ -1,27 +1,88 @@
 @include component(button) {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 1.4rem;
-  background: $palette_b;
+  background: $palette_a;
   color: $white;
   appearance: none;
   border: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    @include transition(transform, ease);
+    position: absolute;
+    left: -10%;
+    top: -610%;
+    bottom: -610%;
+    right: -10%;
+    content: '';
+    background: $palette_b;
+    transform: rotate(45deg) translateX(-101%);
+  }
+
+  &:hover {
+
+    &:before {
+      transform: rotate(45deg) translateX(0);
+    }
+  }
+
+  @include option(drop-in) {
+
+    &:before {
+      @include transition(transform, ease);
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      content: '';
+      background: $palette_b;
+      transform: rotate(45deg) translateX(-101%);
+    }
+
+    &:hover {
+
+      &:before {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @include option(secondary) {
+    background: $palette_b;
+
+    &:before {
+      background: $palette_a;
+    }
+  }
+
+  @include option(small) {
+    font-size: 0.875rem;
+  }
+
+  @include option(large) {
+    font-size: 1.125rem;
+  }
+
+  @include option(larger) {
+    font-size: 1.5rem;
+  }
+
+
+  @include option(largest) {
+    font-size: 2rem;
+  }
 
   @include part(icon) {
-    height: 20px;
-    width: 20px;
+    @include fas;
     display: inline-block;
-    margin-left: 15px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    margin-right: 10px;
+  }
 
-    @include option(rocket) {
-      background-image: url('/assets/img/icons/rocket-ship.png');
-    }
-
-    @include option(spanner) {
-      background-image: url('/assets/img/icons/spanner.png');
-    }
+  @include part(text) {
+    position: relative;
+    z-index: 2;
   }
 }

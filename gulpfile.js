@@ -90,7 +90,6 @@ const browser_sync = () => {
     notify: false,
     ghostMode: false,
     files: ['./assets/dist/bloc.min.css'],
-    tunnel: true,
     proxy: {
       target: appUrl,
       middleware: [
