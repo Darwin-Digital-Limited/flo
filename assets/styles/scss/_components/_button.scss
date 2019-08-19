@@ -8,32 +8,55 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 
   &:before {
-    @include transition(transform, ease);
+    @include transition(width, ease);
     position: absolute;
-    left: -10%;
-    top: -610%;
-    bottom: -610%;
-    right: -10%;
     content: '';
     background: $palette_b;
-    transform: rotate(45deg) translateX(-101%);
+    transform-origin: right center;
+    transform: skewX(-45deg);
+    left: -40px;
+    top: 0;
+    bottom: 0;
+    width: 0;
   }
 
   &:hover {
 
     &:before {
-      transform: rotate(45deg) translateX(0);
+      //transform: translateX(0);
+      width: calc(110% + 60px);
     }
   }
 
   @include option(rounded) {
-    border-radius: 3px;
+    border-radius: $border_radius;
 
     @include option(extra-round) {
       border-radius: 50px;
     }
+  }
+
+  @include option(full-width) {
+    width: 100%;
+  }
+
+  @include option(rounded-top-right) {
+    border-top-right-radius: $border_radius;
+  }
+
+  @include option(rounded-top-left) {
+    border-top-left-radius: $border_radius;
+  }
+
+  @include option(rounded-bottom-left) {
+    border-bottom-left-radius: $border_radius;
+  }
+
+  @include option(rounded-bottom-right) {
+    border-bottom-right-radius: $border_radius;
   }
 
   @include option(drop-in) {
@@ -63,6 +86,35 @@
 
     &:before {
       background: $palette_a;
+    }
+  }
+
+  @include option(tertiary) {
+    background: $palette_c;
+
+    &:before {
+      background: $palette_a;
+    }
+  }
+
+  @include option(transition-to-primary) {
+
+    &:before {
+      background: $palette_a;
+    }
+  }
+
+  @include option(transition-to-secondary) {
+
+    &:before {
+      background: $palette_b;
+    }
+  }
+
+  @include option(transition-to-tertiary) {
+
+    &:before {
+      background: $palette_c;
     }
   }
 

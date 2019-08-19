@@ -5,14 +5,22 @@ import {useDispatch} from 'react-redux';
 import PropTypes from 'prop-types';
 
 export const Button = props => {
+  console.log(PropTypes);
   return <button className={`button
   ${props.secondary ? ' --secondary' : ''}
+  ${props.tertiary ? ' --tertiary' : ''}
   ${props.small ? ' --small' : ''}
   ${props.large ? ' --large' : ''}
   ${props.larger ? ' --larger' : ''}
   ${props.dropIn ? ' --drop-in' : ''}
+  ${props.fullWidth ? ' --full-width' : ''}
   ${props.rounded ? ' --rounded' : ''}
   ${props.extraRound ? ' --rounded --extra-round' : ''}
+  ${props.roundedBottomRight ? ' --rounded-bottom-right' : ''}
+  ${props.roundedBottomLeft ? ' --rounded-bottom-left' : ''}
+  ${props.roundedTopLeft ? ' --rounded-top-left' : ''}
+  ${props.roundedTopRight ? ' --rounded-top-right' : ''}
+  ${props.transitionTo ? ` --transition-to --transition-to-${props.transitionTo}` : ''}
   ${props.largest ? ' --largest' : ''}`}>
     <span className={'button__text'}>
       {props.icon && !props.iconRight && <span className={`button__icon ${props.icon}`}/>}
@@ -24,15 +32,23 @@ export const Button = props => {
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  small: PropTypes.boolean,
-  large: PropTypes.boolean,
-  larger: PropTypes.boolean,
-  largest: PropTypes.boolean,
+  secondary: PropTypes.bool,
+  tertiary: PropTypes.bool,
+  small: PropTypes.bool,
+  large: PropTypes.bool,
+  larger: PropTypes.bool,
+  largest: PropTypes.bool,
   icon: PropTypes.string,
-  iconRight: PropTypes.boolean,
-  dropIn: PropTypes.boolean,
-  rounded: PropTypes.boolean,
-  extraRound: PropTypes.boolean
+  iconRight: PropTypes.bool,
+  dropIn: PropTypes.bool,
+  rounded: PropTypes.bool,
+  extraRound: PropTypes.bool,
+  fullWidth: PropTypes.bool,
+  roundedTopRight: PropTypes.bool,
+  roundedTopLeft: PropTypes.bool,
+  roundedBottomRight: PropTypes.bool,
+  roundedBottomLeft: PropTypes.bool,
+  transitionTo: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
 };
 
 export default Button;

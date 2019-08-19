@@ -1,0 +1,43 @@
+@include component(accordion) {
+
+  @include part(item) {
+    margin-bottom: $vertical_rhythm;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include part(button-container) {
+      position: relative;
+      display: flex;
+      z-index: 2;
+      flex-basis: 50px;
+    }
+
+    @include part(title) {
+      cursor: pointer;
+      background: $palette_a;
+      color: $white;
+      display: flex;
+      flex-direction: row;
+      border-radius: $border_radius;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      @include part(inner) {
+        padding: 15px;
+      }
+    }
+
+    @include part(content) {
+      border: 1px solid $palette_a;
+      transform: translateY(-2px);
+      border-bottom-right-radius: $border_radius;
+      border-bottom-left-radius: $border_radius;
+
+      @include part(inner) {
+        padding: 15px;
+      }
+    }
+  }
+}
