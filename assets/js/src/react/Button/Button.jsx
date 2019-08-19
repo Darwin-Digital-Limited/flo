@@ -11,10 +11,13 @@ export const Button = props => {
   ${props.large ? ' --large' : ''}
   ${props.larger ? ' --larger' : ''}
   ${props.dropIn ? ' --drop-in' : ''}
+  ${props.rounded ? ' --rounded' : ''}
+  ${props.extraRound ? ' --rounded --extra-round' : ''}
   ${props.largest ? ' --largest' : ''}`}>
     <span className={'button__text'}>
-      {props.icon && <span className={`button__icon ${props.icon}`}/>}
+      {props.icon && !props.iconRight && <span className={`button__icon ${props.icon}`}/>}
       {props.text}
+      {props.icon && props.iconRight && <span className={`button__icon --right ${props.icon}`}/>}
     </span>
   </button>;
 };
@@ -26,7 +29,10 @@ Button.propTypes = {
   larger: PropTypes.boolean,
   largest: PropTypes.boolean,
   icon: PropTypes.string,
-  dropIn: PropTypes.boolean
+  iconRight: PropTypes.boolean,
+  dropIn: PropTypes.boolean,
+  rounded: PropTypes.boolean,
+  extraRound: PropTypes.boolean
 };
 
 export default Button;

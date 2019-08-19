@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import Button from '../../assets/js/src/react/Button/Button';
 import '../../assets/dist/bloc.min.css';
 
-storiesOf('Button', module)
+/*storiesOf('Accordion', module)
   .add('with text', () => <Button text={'hello'} />)
   .add('with text and icon', () => <Button icon={'fas fa-rocket'} text={'with an icon'} />)
   .add('with text and icon on the right', () => <Button iconRight icon={'fas fa-rocket'} text={'with an icon on the right'} />)
@@ -12,8 +12,4 @@ storiesOf('Button', module)
   .add('larger button', () => <Button larger text={'larger button'} />)
   .add('largest button', () => <Button largest text={'largest button'} />)
   .add('secondary colour', () => <Button secondary text={'secondary'} />)
-  .add('rounded', () => <Button rounded text={'rounded'} />)
-  .add('rounded secondary', () => <Button rounded secondary text={'rounded secondary'} />)
-  .add('extra rounded', () => <Button extraRound text={'extra rounded'} />)
-  .add('extra rounded secondary', () => <Button extraRound secondary text={'extra rounded secondary'} />)
-  .add('drop-in animation', () => <Button dropIn text={'drop in'} />);
+  .add('drop-in animation', () => <Button dropIn text={'drop in'} />);*/

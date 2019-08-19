@@ -28,6 +28,14 @@
     }
   }
 
+  @include option(rounded) {
+    border-radius: 3px;
+
+    @include option(extra-round) {
+      border-radius: 50px;
+    }
+  }
+
   @include option(drop-in) {
 
     &:before {
@@ -79,6 +87,11 @@
     @include fas;
     display: inline-block;
     margin-right: 10px;
+
+    @include option(right) {
+      margin-right: 0;
+      margin-left: 10px;
+    }
   }
 
   @include part(text) {
