@@ -4,9 +4,13 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 import {useDispatch} from 'react-redux';
 import PropTypes from 'prop-types';
 
+export const myButtonListener = (e) => {
+  const a = 1;
+};
+
 export const Button = props => {
   console.log(PropTypes);
-  return <button className={`button
+  return <button onClick={myButtonListener} className={`button
   ${props.secondary ? ' --secondary' : ''}
   ${props.tertiary ? ' --tertiary' : ''}
   ${props.small ? ' --small' : ''}
