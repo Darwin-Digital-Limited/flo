@@ -52,7 +52,7 @@
     "@storybook/theming": "^5.1.11",
     "immutable": "^4.0.0-rc.12",
     "prop-types": "^15.7.2",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-immutable-proptypes": "^2.1.0",
